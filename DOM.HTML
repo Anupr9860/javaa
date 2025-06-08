@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    DOM(Document object model)
+    <h1>tag</h1>
+    <div class="demo">demo</div>
+    <div id="demo">Id</div>
+    <script>
+        console.log(document.title)
+        console.log(document.getElementsByTagName('h1')[0].innerHTML)
+        console.log(document.getElementsByClassName('demo')[0].innerText)
+        console.log(document.getElementById('demo').innerText)
+        //OR
+        console.log(document.querySelector('h1').innerText)
+        console.log(document.querySelector('.demo').innerText)
+        console.log(document.querySelector('#demo').innerText)
+    </script>
+    Dom for html
+    <button onclick="document.title='DOM class'">Change document title</button>
+    <hr>
+    <h2>This is demo</h2>
+    <button onclick="document.querySelector('h2').innerText='this is changed demo'">change txt value</button>
+    <hr>
+    <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt="" width="100">
+    <button onclick="document.querySelector('img').src='https://media.istockphoto.com/id/588364784/photo/barking-dog.jpg?s=612x612&w=0&k=20&c=ErzW7CvAodzoy3q006GwMHftirKSG01m8tv-UNdav8k='">CHANGER CAT INTO DOG</button>
+    <hr>
+
+    <input type="password" id="pass">
+    <button onclick="abc()" id="btn">Show</button>
+    <script>
+        function  abc() 
+        {
+        if(document.querySelector('#pass').type=='password')
+        {
+            document.querySelector('#pass').type='text';
+            document.querySelector('#btn').innerHTML='Hide'
+
+        }
+        else{
+            document.querySelector('#pass').type='password'
+            document.querySelector('#btn').innerHTML='Show'
+        }
+    }
+    </script>
+</body>
+</html>

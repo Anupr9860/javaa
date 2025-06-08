@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Demo</h1>
+    <button onclick="document.querySelector('h1').style.color='blue'">color</button>
+    <button onclick="document.querySelector('h1').style.background='green'">bg</button>
+    <button onclick="document.querySelector('h1').style.fontSize='50px'">font</button>
+    <button onclick="document.querySelector('h1').style.MarginLeft='30px'">margin</button>
+    <button onclick="efg()">all</button>
+    <script>
+        function efg(){
+        document.querySelector('h1').style.color='blue'
+        document.querySelector('h1').style.background='green'
+        document.querySelector('h1').style.fontSize='50px'
+        document.querySelector('h1').style.MarginLeft='30px'
+        }
+    </script>
+    <button onclick="document.querySelector('h1').classList.add('box')">Addclass</button>
+    <button onclick="document.querySelector('h1').classList.remove('box')">removeclass</button>
+    <button onclick="document.querySelector('h1').classList.toggle('box')">toggle</button>
+    <style>
+        .box{
+            display: none;
+        }
+    </style>
+</body>
+</html>
